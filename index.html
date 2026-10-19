@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jacarandá Marrakech · Restaurant, lounge et jardin à Gueliz</title>
+<meta name="description" content="Restaurant, lounge et jardin à Gueliz, Marrakech. Brunch tous les jours dès 10h, cuisine, cocktails maison et chicha. Ouvert 7j/7.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jacarandá Marrakech · Restaurant, lounge et jardin à Gueliz">
+<meta property="og:description" content="Brunch tous les jours dès 10h, cuisine, cocktails maison et chicha. Un jardin qui devient lounge le soir. Ouvert 7j/7.">
+<meta property="og:image" content="https://salimbennani39.github.io/jacaranda-marrakech/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#E6DFD2">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23857B67'/><path d='M8.6 10.6A9 9 0 0 1 23.4 10.6M24.4 20.2A9 9 0 0 1 7.6 20.2' fill='none' stroke='white' stroke-width='1.6'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Marcellus&display=swap">
+<link rel="preload" as="image" href="media/hero-plate.webp" media="(min-width: 861px)">
+<link rel="preload" as="image" href="media/hero-plate-m.webp" media="(max-width: 860px)">
+<link rel="stylesheet" href="scrollcraft.css">
+<style>
+  :root {
+    /* Day. The six roles come from the printed carte: slate-brown ink,
+       brick prices, taupe from the logo card. */
+    --sc-canvas:     #E6DFD2;
+    --sc-surface:    #D8CFBF;
+    --sc-ink:        #211F18;
+    --sc-ink-soft:   #554F41;
+    --sc-accent:     #9E3B2B;
+    --sc-accent-ink: #FBF7F0;
+    --sc-font-display: "Marcellus", "Iowan Old Style", Georgia, serif;
+    --sc-font-text:    "Jost", "Avenir Next", system-ui, sans-serif;
+    --sc-font-mono:    "Jost", system-ui, sans-serif;
+    --sc-shadow-color: 32 30% 12%;
+    --sc-r: 4px;
+    --taupe: #857B67;
+    --paper: #F7F3EC;
+    --slate: #3F4C51;
+    --brown: #6B533D;
+    --chrome-ink: #211F18;
+    --chrome-bg: #EFE9DE;
+    --chrome-line: rgba(33, 31, 24, .16);
+  }
+  html[data-tone="dark"] {
+    --chrome-ink: #F1EADC;
+    --chrome-bg: #24211A;
+    --chrome-line: rgba(241, 234, 220, .2);
+  }
+
+  /* Night and taupe grounds restate color with their tokens: an inherited
+     color does not re-resolve when a token changes on a subtree. */
+  .night {
+    --sc-ink: #F1EADC; --sc-ink-soft: #BDB39F; --sc-surface: #221F18;
+    --sc-accent: #E58A71; --sc-accent-ink: #1A1610;
+    --sc-shadow-color: 40 30% 3%;
+    color: var(--sc-ink);
+  }
+  .taupe {
+    --sc-ink: #FFFCF6; --sc-ink-soft: #F0E9DC; --sc-surface: #5E5646;
+    --sc-accent: #FFFCF6; --sc-accent-ink: #4A4336;
+    color: var(--sc-ink);
+  }
+
+  body { font-weight: 400; }
+  .sc-display { font-weight: 400; letter-spacing: -0.012em; line-height: 1.02; }
+  .sc-body { font-size: var(--sc-t-base); }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* The hour. Time is the information on this page, so it is the only
+     label that repeats. */
+  .stamp {
+    display: inline-flex; align-items: center; gap: .7em; margin: 0;
+    font: 500 var(--sc-t-sm)/1 var(--sc-font-text);
+    letter-spacing: .16em; text-transform: uppercase;
+    font-variant-numeric: tabular-nums; color: var(--sc-ink-soft);
+  }
+  .stamp b { font-weight: 600; color: var(--sc-accent); letter-spacing: .08em; }
+
+  /* Buttons: one radius for the page, the printed-menu corner. */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+    min-height: 46px; padding: 0 1.25rem; border-radius: var(--sc-r);
+    font: 500 var(--sc-t-sm)/1 var(--sc-font-text); letter-spacing: .1em; text-transform: uppercase;
+    text-decoration: none; white-space: nowrap; cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform 140ms var(--sc-ease-out), background-color 160ms var(--sc-ease-out), color 160ms var(--sc-ease-out), border-color 160ms var(--sc-ease-out);
+  }
+  .btn:active { transform: translateY(1px) scale(.98); }
+  .btn--solid { background: var(--sc-ink); color: var(--sc-canvas-fixed, #F4EFE6); }
+  .btn--line { background: transparent; color: var(--sc-ink); border-color: color-mix(in oklab, var(--sc-ink) 45%, transparent); }
+  @media (hover: hover) and (pointer: fine) {
+    .btn--solid:hover { background: var(--sc-accent); color: var(--sc-accent-ink); }
+    .btn--line:hover { border-color: var(--sc-ink); background: color-mix(in oklab, var(--sc-ink) 8%, transparent); }
+  }
+  .night .btn--solid { color: #1A1610; }
+  .taupe .btn--solid { color: #4A4336; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+  /* ------------------------------------------------------------- chrome -- */
+  .bar {
+    position: fixed; inset: 0 0 auto 0; z-index: 70;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px var(--sc-gutter); pointer-events: none; color: var(--chrome-ink);
+  }
+  .bar > * { pointer-events: auto; }
+  .bar__mark { display: block; width: 104px; color: var(--chrome-ink); transition: opacity 260ms var(--sc-ease-out); }
+  .bar__mark svg { width: 100%; height: auto; }
+  html[data-hero="1"] .bar__mark { opacity: 0; pointer-events: none; }
+  .bar__links { display: flex; gap: .5rem; margin-left: auto; }
+  .bar .btn { min-height: 40px; padding: 0 1rem; font-size: var(--sc-t-xs); }
+  .bar .btn--chip { background: var(--chrome-bg); color: var(--chrome-ink); border-color: var(--chrome-line); }
+  .bar .btn--book { background: var(--chrome-ink); color: var(--chrome-bg); }
+  @media (hover: hover) and (pointer: fine) {
+    .bar .btn--chip:hover { border-color: var(--chrome-ink); }
+    .bar .btn--book:hover { background: var(--sc-accent); color: #FBF7F0; }
+  }
+
+  /* The clock: the logo's ring, keeping the hour. */
+  .clock {
+    position: fixed; left: var(--sc-gutter); bottom: 24px; z-index: 72;
+    display: flex; align-items: center; gap: .9rem; color: var(--chrome-ink);
+    transform-origin: 50% 50%;
+  }
+  .clock__dial {
+    position: relative; width: 92px; height: 92px; flex: none; border-radius: 50%;
+    background: var(--chrome-bg); box-shadow: var(--sc-e2);
+    cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none;
+    transition: background-color 300ms var(--sc-ease-out);
+  }
+  .clock__dial.is-drag { cursor: grabbing; }
+  .clock__dial:focus-visible { outline: 2px solid var(--chrome-ink); outline-offset: 4px; border-radius: 50%; }
+  .clock__dial svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .clock__track { fill: none; stroke: currentColor; stroke-width: 34; opacity: .22; }
+  .clock__fill { fill: none; stroke: currentColor; stroke-width: 46; stroke-linecap: round; }
+  .clock__arc { fill: none; stroke: currentColor; stroke-width: 44; opacity: 0; }
+  .clock__sun { fill: var(--sc-accent); stroke: var(--chrome-bg); stroke-width: 26; }
+  html[data-tone="dark"] .clock__sun { fill: #E58A71; }
+  .clock__time {
+    position: absolute; inset: 0; display: grid; place-items: center;
+    font: 500 14px/1 var(--sc-font-text); letter-spacing: .04em; font-variant-numeric: tabular-nums;
+    pointer-events: none;
+  }
+  .clock__label {
+    font: 500 var(--sc-t-xs)/1.3 var(--sc-font-text); letter-spacing: .14em; text-transform: uppercase;
+    padding: .55rem .8rem; border-radius: var(--sc-r); background: var(--chrome-bg); box-shadow: var(--sc-e1);
+    transition: opacity 200ms var(--sc-ease-out);
+  }
+  .clock__menu {
+    position: absolute; left: 0; bottom: calc(100% + 12px); margin: 0; padding: .4rem;
+    list-style: none; min-width: 15rem; border-radius: var(--sc-r);
+    background: var(--chrome-bg); box-shadow: var(--sc-e3); border: 1px solid var(--chrome-line);
+    opacity: 0; transform: translateY(6px) scale(.98); transform-origin: 0 100%; pointer-events: none; visibility: hidden;
+    transition: opacity 180ms var(--sc-ease-out), transform 180ms var(--sc-ease-out), visibility 0s linear 180ms;
+  }
+  .clock.is-open .clock__menu, .clock:focus-within .clock__menu {
+    opacity: 1; transform: none; pointer-events: auto; visibility: visible;
+    transition: opacity 180ms var(--sc-ease-out), transform 180ms var(--sc-ease-out), visibility 0s;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .clock:hover .clock__menu { opacity: 1; transform: none; pointer-events: auto; visibility: visible; transition: opacity 180ms var(--sc-ease-out), transform 180ms var(--sc-ease-out), visibility 0s; }
+    .clock:hover .clock__label { opacity: 0; }
+  }
+  .clock__menu a {
+    display: grid; grid-template-columns: 3.6rem 1fr; align-items: center; min-height: 40px; padding: 0 .7rem;
+    border-radius: 3px; text-decoration: none; font-size: var(--sc-t-sm); color: var(--chrome-ink);
+  }
+  .clock__menu a span { font-variant-numeric: tabular-nums; opacity: .62; letter-spacing: .04em; }
+  .clock__menu a[aria-current="true"] { background: color-mix(in oklab, var(--chrome-ink) 9%, transparent); }
+  @media (hover: hover) and (pointer: fine) { .clock__menu a:hover { background: color-mix(in oklab, var(--chrome-ink) 12%, transparent); } }
+  .clock__hint { position: absolute; left: 0; bottom: calc(100% + 12px); }
+
+  /* --------------------------------------------------------------- hero -- */
+  .hero .sc-stage { background: #C88A72; }
+  .hero__scene {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%;
+    max-width: none; transform-origin: 50% 72%;
+    transform: translate3d(calc(var(--mx, 0) * -5px), calc(var(--sc-p, 0) * -4vh + var(--my, 0) * -3px), 0)
+               scale(calc(1.07 - var(--sc-p, 0) * 0.07));
+  }
+  .hero__plate { z-index: 0; }
+  .hero__wallscrim {
+    position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: radial-gradient(46% 30% at 50% 37%, rgba(74, 34, 20, .30), rgba(74, 34, 20, .12) 55%, transparent 80%);
+  }
+  .hero__type {
+    position: absolute; z-index: 2; left: 50%; top: 19%; width: min(46vw, 920px);
+    margin: 0; color: #FFFBF4; text-align: center;
+    transform: translate3d(calc(-50% + var(--mx, 0) * -11px), calc(var(--sc-p, 0) * -15vh + var(--my, 0) * -6px), 0);
+  }
+  .hero__type svg { width: 100%; height: auto; overflow: visible; }
+  .hero__tag {
+    display: block; margin-top: clamp(.8rem, 1.6vw, 1.6rem);
+    font: 500 clamp(.8rem, .55rem + .7vw, 1.15rem)/1 var(--sc-font-text);
+    letter-spacing: .5em; padding-left: .5em; text-transform: uppercase;
+  }
+  .hero__front { z-index: 3; pointer-events: none; }
+  .hero__haze {
+    position: absolute; inset: -10%; z-index: 4; pointer-events: none;
+    background: radial-gradient(60% 50% at 12% 0%, rgba(255, 232, 196, .42), transparent 70%);
+    opacity: calc(1 - var(--sc-p, 0) * .7);
+    transform: translate3d(calc(var(--sc-p, 0) * 4vw), 0, 0);
+  }
+  .hero__leaf { position: absolute; z-index: 5; max-width: none; height: auto; pointer-events: none; }
+  .hero__leaf--palm {
+    left: -5vw; bottom: -34vh; width: min(31vw, 560px); transform-origin: 0% 100%;
+    transform: translate3d(calc(var(--sc-p, 0) * -15vw + var(--mx, 0) * -22px), calc(var(--sc-p, 0) * 12vh + var(--my, 0) * -12px), 0)
+               scale(calc(1 + var(--sc-p, 0) * .24));
+  }
+  .hero__leaf--olive {
+    right: -4vw; top: -9vh; width: min(30vw, 540px); transform-origin: 100% 0%;
+    transform: translate3d(calc(var(--sc-p, 0) * 11vw + var(--mx, 0) * -18px), calc(var(--sc-p, 0) * -12vh + var(--my, 0) * -10px), 0)
+               scale(calc(1 + var(--sc-p, 0) * .2));
+  }
+  .hero__band { z-index: 6; opacity: .82; }
+  .hero__copy { z-index: 7; max-width: min(30rem, 76vw); }
+  .hero__copy p { margin: 0 0 1.25rem auto; max-width: 30ch; font-size: var(--sc-t-lg); line-height: 1.4; color: var(--sc-ink); }
+  .hero__copy .actions { justify-content: flex-end; }
+
+  /* -------------------------------------------------------------- brunch -- */
+  .brunch .sc-stage { display: flex; align-items: center; }
+  .rail { gap: clamp(2rem, 4.5vw, 4.5rem); padding-inline: var(--sc-gutter); align-items: center; }
+  .rail > * { flex: none; }
+  @media (prefers-reduced-motion: no-preference) {
+    .rail > :not(:first-child) {
+      --k: clamp(0, calc((var(--sc-p, 0) * 1.25 - var(--i) * .13) * 5), 1);
+      opacity: calc(.55 + var(--k) * .45);
+      transform: translate3d(0, calc((1 - var(--k)) * 26px), 0);
+    }
+  }
+  .b-lead { width: min(29rem, 34vw); }
+  .b-lead h2 { margin: 1.1rem 0 1.2rem; font-size: var(--sc-t-3xl); }
+  .b-lead .sc-body { margin-bottom: 1.4rem; }
+  .price-line { display: flex; align-items: baseline; gap: .6rem; margin: 0; font-size: var(--sc-t-lg); }
+  .price-line strong { font: 400 var(--sc-t-2xl)/1 var(--sc-font-display); color: var(--sc-accent); font-variant-numeric: tabular-nums; }
+  .shot { margin: 0; height: min(72vh, 760px); aspect-ratio: 3 / 4; border-radius: var(--sc-r); overflow: hidden; box-shadow: var(--sc-e3); background: var(--sc-surface); }
+  .shot img { width: 100%; height: 100%; object-fit: cover; }
+  .dishes { width: min(21rem, 70vw); display: grid; gap: 2.4rem; }
+  .dish { border-top: 1px solid var(--sc-hairline-strong); padding-top: 1rem; }
+  .dish__origin { margin: 0 0 .35rem; font-size: var(--sc-t-xs); letter-spacing: .18em; text-transform: uppercase; color: var(--sc-ink-soft); }
+  .dish__name { margin: 0 0 .5rem; font: 400 var(--sc-t-xl)/1.05 var(--sc-font-display); }
+  .dish__items { margin: 0; color: var(--sc-ink-soft); font-size: var(--sc-t-sm); line-height: 1.55; }
+  .b-end { width: min(24rem, 72vw); }
+  .b-end h3 { margin: 0 0 1rem; font: 400 var(--sc-t-xl)/1.1 var(--sc-font-display); }
+
+  /* Printed-menu lines: name in ink, price in brick, dotted leader. */
+  .menu-lines { list-style: none; margin: 0 0 1.6rem; padding: 0; display: grid; gap: .55rem; }
+  .menu-lines li { display: flex; align-items: baseline; gap: .6rem; }
+  .menu-lines li::after { content: ""; order: 2; flex: 1; border-bottom: 1px dotted color-mix(in oklab, var(--sc-ink) 35%, transparent); transform: translateY(-.3em); }
+  .menu-lines .n { order: 1; }
+  .menu-lines li:not(:has(.p))::after { display: none; }
+  .menu-lines .n small { display: block; color: var(--sc-ink-soft); font-size: var(--sc-t-xs); letter-spacing: .02em; }
+  .menu-lines .p { order: 3; color: var(--sc-accent); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+  /* ----------------------------------------------------------- dejeuner -- */
+  .dej { padding-block: clamp(3rem, 6vw, 6rem) clamp(3rem, 7vw, 6.5rem); }
+  .dej__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(2rem, 6vw, 7rem); align-items: center; }
+  .dej__text h2 { margin: 1.1rem 0 1.4rem; font-size: var(--sc-t-3xl); }
+  .dej__text .sc-body { margin-bottom: 2rem; }
+  .dej__fig { margin: 0; justify-self: end; width: 100%; max-width: 640px; aspect-ratio: 3 / 4; border-radius: var(--sc-r); overflow: hidden; box-shadow: var(--sc-e3); }
+  .dej__fig img { width: 100%; height: 100%; object-fit: cover; }
+  .dej__note { margin: 0 0 1.6rem; font-size: var(--sc-t-xs); letter-spacing: .14em; text-transform: uppercase; color: var(--sc-ink-soft); }
+  .pdf-link { font-size: var(--sc-t-sm); color: var(--sc-ink-soft); align-self: center; margin-left: .4rem; }
+
+  /* ----------------------------------------------------------- coucher -- */
+  .dusk { min-height: 165vh; position: relative; }
+  .dusk__frame { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+  .dusk__img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%;
+    --m1: max(0%, calc((0.36 - var(--sc-p, 0)) * 110%));
+    --m2: max(0%, calc((var(--sc-p, 0) - 0.66) * 110%));
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 var(--m1), #000 calc(100% - var(--m2)), transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0, #000 var(--m1), #000 calc(100% - var(--m2)), transparent 100%);
+    transform: scale(calc(1.08 - var(--sc-p, 0) * 0.08)); transform-origin: 50% 60%;
+  }
+  .dusk__scrim { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(42% 34% at 52% 36%, rgba(30, 18, 12, .32), transparent 75%); }
+  .dusk__line { position: absolute; left: 31vw; top: 25vh; width: min(38rem, 46vw); }
+  .dusk__line h2 { margin-top: 1.1rem; font-size: var(--sc-t-3xl); }
+
+  /* ------------------------------------------------------------ lounge -- */
+  .lounge .sc-stage { background: #0F0E0A; }
+  .lounge__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+  .lounge__on {
+    --t: clamp(0, calc((var(--sc-p, 0) - .05) / .34), 1);
+    --r: calc(var(--t) * var(--t) * 150vmax);
+    -webkit-mask-image: radial-gradient(circle at var(--lamp-x, 85%) var(--lamp-y, 37%), #000 calc(var(--r) - 14vmax), transparent var(--r));
+            mask-image: radial-gradient(circle at var(--lamp-x, 85%) var(--lamp-y, 37%), #000 calc(var(--r) - 14vmax), transparent var(--r));
+  }
+  .lounge__scrim {
+    position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: linear-gradient(90deg, rgba(12, 11, 8, .82) 0%, rgba(12, 11, 8, .55) 30%, transparent 48%);
+  }
+  .lounge__copy { position: absolute; z-index: 3; left: var(--sc-gutter); top: 0; bottom: 0; width: min(31rem, 36vw); }
+  .lounge__copy .stamp { position: absolute; top: 22vh; left: 0; }
+  .l-cue { position: absolute; left: 0; right: 0; top: 30vh; }
+  .l-cue h2 { font-size: var(--sc-t-3xl); }
+  .l-cue h3 { margin: 0 0 .9rem; font: 400 var(--sc-t-2xl)/1.05 var(--sc-font-display); }
+  .l-cue p { margin: 0; color: var(--sc-ink-soft); font-size: var(--sc-t-lg); line-height: 1.5; max-width: 30ch; }
+  .l-cue--drink { display: grid; grid-template-columns: 9.5rem 1fr; gap: 1.4rem; align-items: start; }
+  .l-cue--drink img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--sc-r); box-shadow: var(--sc-e3); }
+  .l-cue--drink p { font-size: var(--sc-t-base); }
+
+  /* ------------------------------------------------------------- close -- */
+  .close { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding-block: clamp(6rem, 12vh, 9rem) 2rem; }
+  .close__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 7rem); align-items: center; }
+  .lockup { margin: 0; justify-self: center; width: min(31rem, 38vw); text-align: center; color: #FFFCF6; }
+  .lockup svg { width: 100%; height: auto; overflow: visible; }
+  .lockup__ring path { fill: none; stroke: currentColor; stroke-width: 44; }
+  .lockup__tag { display: block; margin-top: 1.4rem; font: 500 clamp(.72rem, .5rem + .55vw, 1rem)/1 var(--sc-font-text); letter-spacing: .48em; padding-left: .48em; }
+  .close__text h2 { margin: 1.1rem 0 1.2rem; font-size: var(--sc-t-3xl); }
+  .close__text .sc-body { color: var(--sc-ink-soft); margin-bottom: 2rem; }
+  .facts { display: grid; grid-template-columns: auto 1fr; gap: .7rem 1.6rem; margin: 2.4rem 0 0; padding-top: 1.6rem; border-top: 1px solid color-mix(in oklab, var(--sc-ink) 28%, transparent); font-size: var(--sc-t-sm); }
+  .facts dt { letter-spacing: .14em; text-transform: uppercase; font-size: var(--sc-t-xs); padding-top: .2em; color: var(--sc-ink-soft); }
+  .facts dd { margin: 0; }
+  .ig { margin-top: clamp(3rem, 7vh, 5rem); }
+  .ig__head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 1rem; font-size: var(--sc-t-sm); }
+  .ig__grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .5rem; }
+  .ig__grid a { display: block; aspect-ratio: 4 / 5; overflow: hidden; border-radius: var(--sc-r); }
+  .ig__grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 300ms var(--sc-ease-out); }
+  @media (hover: hover) and (pointer: fine) { .ig__grid a:hover img { transform: scale(1.04); } }
+  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .6rem 1.4rem; margin-top: 2.4rem; font-size: var(--sc-t-xs); letter-spacing: .06em; color: var(--sc-ink-soft); }
+  .foot a { color: inherit; }
+
+  /* ------------------------------------------------------------- carte -- */
+  .carte {
+    --sc-ink: #2A2A24; --sc-ink-soft: #6B6555; --sc-accent: #9E3B2B;
+    position: fixed; inset: 0 0 0 auto; margin: 0; height: 100%; max-height: none;
+    width: min(44rem, 100vw); padding: 0; border: 0; color: var(--sc-ink); background: var(--paper);
+    box-shadow: var(--sc-e3); overflow: hidden;
+  }
+  .carte[open] { display: flex; flex-direction: column; animation: carte-in 320ms var(--sc-ease-drawer); }
+  .carte::backdrop { background: rgba(20, 18, 12, .5); }
+  @keyframes carte-in { from { transform: translate3d(8%, 0, 0); opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .carte[open] { animation: none; } }
+  .carte__head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.4rem clamp(1.25rem, 4vw, 2.6rem) 1rem; }
+  .carte__head h2 { font-size: var(--sc-t-2xl); }
+  .carte__x { width: 44px; height: 44px; display: grid; place-items: center; border-radius: var(--sc-r); border: 1px solid rgba(42, 42, 36, .2); background: transparent; cursor: pointer; }
+  @media (hover: hover) and (pointer: fine) { .carte__x:hover { border-color: var(--sc-ink); } }
+  .tabs { display: flex; gap: .3rem; padding: 0 clamp(1.25rem, 4vw, 2.6rem); border-bottom: 1px solid rgba(42, 42, 36, .14); overflow-x: auto; scrollbar-width: none; }
+  .tabs button {
+    flex: none; min-height: 44px; padding: 0 .9rem; border: 0; background: none; cursor: pointer;
+    font: 600 var(--sc-t-xs)/1 var(--sc-font-text); letter-spacing: .16em; text-transform: uppercase; color: var(--sc-ink-soft);
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+  }
+  .tabs button[aria-selected="true"] { color: var(--brown); border-bottom-color: var(--sc-accent); }
+  @media (hover: hover) and (pointer: fine) { .tabs button:hover { color: var(--sc-ink); } }
+  .carte__body { flex: 1; overflow-y: auto; padding: 1.8rem clamp(1.25rem, 4vw, 2.6rem) 2.4rem; overscroll-behavior: contain; }
+  .carte__body [role="tabpanel"] { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.2rem 2.4rem; align-items: start; }
+  .carte__body [hidden] { display: none; }
+  .carte h3 { margin: 0 0 1rem; font: 600 var(--sc-t-sm)/1.2 var(--sc-font-text); letter-spacing: .16em; text-transform: uppercase; color: var(--brown); }
+  .carte h3 span { color: var(--sc-accent); margin-left: .4em; }
+  .carte .menu-lines { margin: 0; gap: .7rem; }
+  .carte .menu-lines .n { color: var(--slate); text-transform: uppercase; font-size: var(--sc-t-sm); letter-spacing: .04em; }
+  .carte .menu-lines .n small { text-transform: none; letter-spacing: 0; color: var(--sc-ink-soft); margin-top: .15rem; }
+  .carte .wide { grid-column: 1 / -1; }
+  .carte table { width: 100%; border-collapse: collapse; font-size: var(--sc-t-sm); }
+  .carte th { text-align: left; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: var(--sc-t-xs); color: var(--brown); padding: .9rem 0 .5rem; }
+  .carte th:not(:first-child), .carte td:not(:first-child) { text-align: right; width: 7.5rem; }
+  .carte td { padding: .4rem 0; border-bottom: 1px dotted rgba(42, 42, 36, .25); color: var(--slate); text-transform: uppercase; letter-spacing: .04em; }
+  .carte td:not(:first-child) { color: var(--sc-accent); font-weight: 500; }
+  .carte__foot { padding: 1rem clamp(1.25rem, 4vw, 2.6rem); border-top: 1px solid rgba(42, 42, 36, .14); display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-size: var(--sc-t-sm); color: var(--sc-ink-soft); }
+
+  /* ------------------------------------------------------------ mobile -- */
+  @media (max-width: 860px) {
+    .bar { padding-top: 14px; }
+    .bar__mark { display: none; }
+    .clock { left: var(--sc-gutter); top: 12px; bottom: auto; }
+    .clock__dial { width: 60px; height: 60px; }
+    .clock__time { font-size: 10.5px; }
+    .clock__label { display: none; }
+    .clock__menu { top: calc(100% + 10px); bottom: auto; transform-origin: 0 0; transform: translateY(-6px) scale(.98); }
+
+    .hero__scene { object-position: 50% 60%; }
+    .hero__type { top: 27%; width: 82vw; }
+    .hero__tag { letter-spacing: .34em; padding-left: .34em; }
+    .hero__wallscrim { background: radial-gradient(70% 22% at 50% 37%, rgba(74, 34, 20, .32), transparent 80%); }
+    .hero__leaf--palm { width: 56vw; left: -16vw; bottom: -30svh; }
+    .hero__leaf--olive { width: 52vw; right: -12vw; top: 0; }
+    .hero__copy { max-width: none; }
+    .hero__band { opacity: 1; }
+    .bar .btn { padding: 0 .8rem; letter-spacing: .07em; }
+    .hero__copy p { margin-left: 0; }
+    .hero__copy .actions { justify-content: flex-start; }
+
+    .b-lead { width: 80vw; }
+    .shot { height: 56svh; }
+    .dishes { width: 76vw; gap: 1.8rem; }
+
+    .dej__grid { grid-template-columns: 1fr; }
+    .dusk__img { object-position: 46% 55%; }
+    .dusk__line { left: var(--sc-gutter); right: var(--sc-gutter); width: auto; top: 22svh; }
+    .dej__fig { justify-self: stretch; max-width: none; aspect-ratio: 4 / 5; order: -1; }
+
+    .lounge__img { object-position: 90% 50%; }
+    .lounge__on { --lamp-x: 71%; }
+    .lounge__scrim { background: linear-gradient(0deg, rgba(12, 11, 8, .9) 0%, rgba(12, 11, 8, .7) 38%, transparent 62%); }
+    .lounge__copy { width: auto; right: var(--sc-gutter); }
+    .lounge__copy .stamp { top: auto; bottom: 46svh; }
+    .l-cue { top: auto; bottom: 7svh; }
+    .l-cue--drink { grid-template-columns: 6.5rem 1fr; gap: 1rem; }
+
+    .close__grid { grid-template-columns: 1fr; }
+    .lockup { width: min(17rem, 64vw); }
+    .ig__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .carte__body [role="tabpanel"] { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero__scene, .hero__type, .hero__leaf, .hero__haze, .dusk__img { transform: none !important; }
+    .hero__type { translate: -50% 0; }
+    .lounge__on { -webkit-mask-image: none; mask-image: none; }
+    .lounge__off { display: none; }
+    /* The rail is navigation, not decoration: without motion it becomes a
+       plain wrapped spread instead of a pinned stage that never moves. */
+    .brunch { height: auto !important; }
+    .brunch .sc-stage { position: relative; height: auto; overflow: visible; padding-block: var(--sc-section); }
+    .brunch .rail { flex-wrap: wrap; row-gap: 3rem; transform: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="jac-wm" viewBox="380 820 1830 760"><svg x="380" y="820" width="1830" height="760" viewBox="-24 -734 4516 961" preserveAspectRatio="xMidYMid meet"><g fill="currentColor"><g fill="currentColor"><path d="M168.9453125 -101.07421875Q168.9453125 -35.15625 155.517578125 13.18359375Q142.08984375 61.5234375 117.919921875 98.876953125Q93.75 136.23046875 60.791015625 165.52734375Q27.83203125 194.82421875 -11.23046875 223.14453125L-20.01953125 210.9375Q13.671875 180.17578125 33.447265625 146.97265625Q53.22265625 113.76953125 63.720703125 75.927734375Q74.21875 38.0859375 77.1484375 -5.615234375Q80.078125 -49.31640625 80.078125 -101.07421875V-508.7890625Q80.078125 -550.29296875 79.1015625 -581.298828125Q78.125 -612.3046875 76.171875 -635.009765625Q74.21875 -657.71484375 71.533203125 -672.8515625Q68.84765625 -687.98828125 65.91796875 -698.2421875V-700.1953125H183.10546875V-698.2421875Q180.17578125 -687.98828125 177.490234375 -672.8515625Q174.8046875 -657.71484375 172.8515625 -635.009765625Q170.8984375 -612.3046875 169.921875 -581.298828125Q168.9453125 -550.29296875 168.9453125 -508.7890625ZM305.15625 -144.04296875Q305.15625 -182.6171875 321.025390625 -210.9375Q336.89453125 -239.2578125 363.26171875 -259.27734375Q389.62890625 -279.296875 423.3203125 -291.748046875Q457.01171875 -304.19921875 493.14453125 -311.279296875Q529.27734375 -318.359375 564.43359375 -321.044921875Q599.58984375 -323.73046875 628.88671875 -324.21875V-349.12109375Q628.88671875 -381.34765625 620.5859375 -404.78515625Q612.28515625 -428.22265625 597.1484375 -443.603515625Q582.01171875 -458.984375 560.771484375 -466.552734375Q539.53125 -474.12109375 514.140625 -474.12109375Q496.5625 -474.12109375 479.47265625 -471.19140625Q462.3828125 -468.26171875 444.072265625 -461.42578125Q425.76171875 -454.58984375 405.498046875 -442.87109375Q385.234375 -431.15234375 361.796875 -413.0859375L356.9140625 -416.015625L390.1171875 -484.86328125Q406.23046875 -492.1875 421.85546875 -496.826171875Q437.48046875 -501.46484375 453.59375 -504.39453125Q469.70703125 -507.32421875 486.552734375 -508.544921875Q503.3984375 -509.765625 521.953125 -509.765625Q573.22265625 -509.765625 609.599609375 -497.314453125Q645.9765625 -484.86328125 669.169921875 -463.134765625Q692.36328125 -441.40625 703.10546875 -412.353515625Q713.84765625 -383.30078125 713.84765625 -350.09765625V-190.91796875Q713.84765625 -149.4140625 715.068359375 -118.408203125Q716.2890625 -87.40234375 717.998046875 -64.94140625Q719.70703125 -42.48046875 722.392578125 -27.34375Q725.078125 -12.20703125 728.0078125 -1.953125V0.0H620.09765625V-1.953125Q622.5390625 -9.765625 623.759765625 -19.53125Q624.98046875 -29.296875 625.95703125 -42.96875Q615.703125 -34.1796875 601.787109375 -24.90234375Q587.87109375 -15.625 570.048828125 -8.056640625Q552.2265625 -0.48828125 530.498046875 4.150390625Q508.76953125 8.7890625 482.890625 8.7890625Q397.9296875 8.7890625 351.54296875 -31.005859375Q305.15625 -70.80078125 305.15625 -144.04296875ZM628.88671875 -286.1328125Q584.453125 -285.64453125 543.4375 -281.005859375Q502.421875 -276.3671875 470.927734375 -261.71875Q439.43359375 -247.0703125 420.634765625 -219.970703125Q401.8359375 -192.87109375 401.8359375 -147.94921875Q401.8359375 -90.33203125 430.64453125 -60.05859375Q459.453125 -29.78515625 510.234375 -29.78515625Q533.671875 -29.78515625 552.958984375 -36.376953125Q572.24609375 -42.96875 587.138671875 -52.978515625Q602.03125 -62.98828125 612.28515625 -74.951171875Q622.5390625 -86.9140625 627.91015625 -98.14453125Q628.88671875 -116.69921875 628.88671875 -139.404296875Q628.88671875 -162.109375 628.88671875 -190.91796875ZM1287.0703125 -104.00390625 1250.9375 -17.08984375Q1237.75390625 -11.23046875 1220.6640625 -6.34765625Q1203.57421875 -1.46484375 1185.263671875 1.953125Q1166.953125 5.37109375 1148.3984375 7.080078125Q1129.84375 8.7890625 1113.2421875 8.7890625Q1054.16015625 8.7890625 1004.111328125 -8.544921875Q954.0625 -25.87890625 917.685546875 -59.08203125Q881.30859375 -92.28515625 860.80078125 -140.625Q840.29296875 -188.96484375 840.29296875 -250.9765625Q840.29296875 -306.15234375 861.533203125 -353.271484375Q882.7734375 -400.390625 920.615234375 -435.05859375Q958.45703125 -469.7265625 1009.7265625 -489.2578125Q1060.99609375 -508.7890625 1121.0546875 -508.7890625Q1148.3984375 -508.7890625 1179.6484375 -504.150390625Q1210.8984375 -499.51171875 1235.3125 -492.1875L1269.98046875 -409.1796875L1264.12109375 -405.76171875Q1251.9140625 -420.8984375 1235.068359375 -433.349609375Q1218.22265625 -445.80078125 1197.958984375 -454.58984375Q1177.6953125 -463.37890625 1155.234375 -468.26171875Q1132.7734375 -473.14453125 1109.3359375 -473.14453125Q1071.25 -473.14453125 1040.0 -459.716796875Q1008.75 -446.2890625 986.2890625 -420.8984375Q963.828125 -395.5078125 951.376953125 -358.642578125Q938.92578125 -321.77734375 938.92578125 -274.90234375Q938.92578125 -222.16796875 950.888671875 -176.7578125Q962.8515625 -131.34765625 986.533203125 -97.900390625Q1010.21484375 -64.453125 1046.103515625 -45.654296875Q1081.9921875 -26.85546875 1130.33203125 -26.85546875Q1152.79296875 -26.85546875 1175.009765625 -32.470703125Q1197.2265625 -38.0859375 1217.001953125 -48.583984375Q1236.77734375 -59.08203125 1253.37890625 -73.73046875Q1269.98046875 -88.37890625 1281.2109375 -106.93359375ZM1367.12890625 -144.04296875Q1367.12890625 -182.6171875 1382.998046875 -210.9375Q1398.8671875 -239.2578125 1425.234375 -259.27734375Q1451.6015625 -279.296875 1485.29296875 -291.748046875Q1518.984375 -304.19921875 1555.1171875 -311.279296875Q1591.25 -318.359375 1626.40625 -321.044921875Q1661.5625 -323.73046875 1690.859375 -324.21875V-349.12109375Q1690.859375 -381.34765625 1682.55859375 -404.78515625Q1674.2578125 -428.22265625 1659.12109375 -443.603515625Q1643.984375 -458.984375 1622.744140625 -466.552734375Q1601.50390625 -474.12109375 1576.11328125 -474.12109375Q1558.53515625 -474.12109375 1541.4453125 -471.19140625Q1524.35546875 -468.26171875 1506.044921875 -461.42578125Q1487.734375 -454.58984375 1467.470703125 -442.87109375Q1447.20703125 -431.15234375 1423.76953125 -413.0859375L1418.88671875 -416.015625L1452.08984375 -484.86328125Q1468.203125 -492.1875 1483.828125 -496.826171875Q1499.453125 -501.46484375 1515.56640625 -504.39453125Q1531.6796875 -507.32421875 1548.525390625 -508.544921875Q1565.37109375 -509.765625 1583.92578125 -509.765625Q1635.1953125 -509.765625 1671.572265625 -497.314453125Q1707.94921875 -484.86328125 1731.142578125 -463.134765625Q1754.3359375 -441.40625 1765.078125 -412.353515625Q1775.8203125 -383.30078125 1775.8203125 -350.09765625V-190.91796875Q1775.8203125 -149.4140625 1777.041015625 -118.408203125Q1778.26171875 -87.40234375 1779.970703125 -64.94140625Q1781.6796875 -42.48046875 1784.365234375 -27.34375Q1787.05078125 -12.20703125 1789.98046875 -1.953125V0.0H1682.0703125V-1.953125Q1684.51171875 -9.765625 1685.732421875 -19.53125Q1686.953125 -29.296875 1687.9296875 -42.96875Q1677.67578125 -34.1796875 1663.759765625 -24.90234375Q1649.84375 -15.625 1632.021484375 -8.056640625Q1614.19921875 -0.48828125 1592.470703125 4.150390625Q1570.7421875 8.7890625 1544.86328125 8.7890625Q1459.90234375 8.7890625 1413.515625 -31.005859375Q1367.12890625 -70.80078125 1367.12890625 -144.04296875ZM1690.859375 -286.1328125Q1646.42578125 -285.64453125 1605.41015625 -281.005859375Q1564.39453125 -276.3671875 1532.900390625 -261.71875Q1501.40625 -247.0703125 1482.607421875 -219.970703125Q1463.80859375 -192.87109375 1463.80859375 -147.94921875Q1463.80859375 -90.33203125 1492.6171875 -60.05859375Q1521.42578125 -29.78515625 1572.20703125 -29.78515625Q1595.64453125 -29.78515625 1614.931640625 -36.376953125Q1634.21875 -42.96875 1649.111328125 -52.978515625Q1664.00390625 -62.98828125 1674.2578125 -74.951171875Q1684.51171875 -86.9140625 1689.8828125 -98.14453125Q1690.859375 -116.69921875 1690.859375 -139.404296875Q1690.859375 -162.109375 1690.859375 -190.91796875ZM1943.28125 -309.08203125Q1943.28125 -350.5859375 1942.060546875 -381.591796875Q1940.83984375 -412.59765625 1939.130859375 -435.05859375Q1937.421875 -457.51953125 1934.736328125 -472.65625Q1932.05078125 -487.79296875 1929.12109375 -498.046875V-500.0H2041.9140625V-498.046875Q2038.0078125 -486.81640625 2035.322265625 -470.703125Q2032.63671875 -454.58984375 2031.171875 -429.19921875Q2049.23828125 -444.3359375 2068.76953125 -458.984375Q2088.30078125 -473.6328125 2108.80859375 -484.86328125Q2129.31640625 -496.09375 2150.556640625 -502.9296875Q2171.796875 -509.765625 2193.28125 -509.765625Q2206.46484375 -509.765625 2216.23046875 -508.544921875Q2225.99609375 -507.32421875 2233.80859375 -505.126953125Q2241.62109375 -502.9296875 2247.96875 -500.244140625Q2254.31640625 -497.55859375 2260.17578125 -495.1171875L2236.25 -401.85546875L2227.94921875 -403.80859375Q2222.08984375 -425.29296875 2205.9765625 -438.232421875Q2189.86328125 -451.171875 2162.03125 -451.171875Q2146.89453125 -451.171875 2130.29296875 -445.80078125Q2113.69140625 -440.4296875 2096.6015625 -430.908203125Q2079.51171875 -421.38671875 2062.421875 -408.935546875Q2045.33203125 -396.484375 2029.21875 -382.8125Q2028.2421875 -368.65234375 2028.2421875 -352.05078125Q2028.2421875 -335.44921875 2028.2421875 -316.89453125V-190.91796875Q2028.2421875 -149.4140625 2029.21875 -118.408203125Q2030.1953125 -87.40234375 2032.1484375 -64.94140625Q2034.1015625 -42.48046875 2036.54296875 -27.34375Q2038.984375 -12.20703125 2041.9140625 -1.953125V0.0H1929.12109375V-1.953125Q1932.05078125 -12.20703125 1934.736328125 -27.34375Q1937.421875 -42.48046875 1939.130859375 -64.94140625Q1940.83984375 -87.40234375 1942.060546875 -118.408203125Q1943.28125 -149.4140625 1943.28125 -190.91796875ZM2316.30859375 -144.04296875Q2316.30859375 -182.6171875 2332.177734375 -210.9375Q2348.046875 -239.2578125 2374.4140625 -259.27734375Q2400.78125 -279.296875 2434.47265625 -291.748046875Q2468.1640625 -304.19921875 2504.296875 -311.279296875Q2540.4296875 -318.359375 2575.5859375 -321.044921875Q2610.7421875 -323.73046875 2640.0390625 -324.21875V-349.12109375Q2640.0390625 -381.34765625 2631.73828125 -404.78515625Q2623.4375 -428.22265625 2608.30078125 -443.603515625Q2593.1640625 -458.984375 2571.923828125 -466.552734375Q2550.68359375 -474.12109375 2525.29296875 -474.12109375Q2507.71484375 -474.12109375 2490.625 -471.19140625Q2473.53515625 -468.26171875 2455.224609375 -461.42578125Q2436.9140625 -454.58984375 2416.650390625 -442.87109375Q2396.38671875 -431.15234375 2372.94921875 -413.0859375L2368.06640625 -416.015625L2401.26953125 -484.86328125Q2417.3828125 -492.1875 2433.0078125 -496.826171875Q2448.6328125 -501.46484375 2464.74609375 -504.39453125Q2480.859375 -507.32421875 2497.705078125 -508.544921875Q2514.55078125 -509.765625 2533.10546875 -509.765625Q2584.375 -509.765625 2620.751953125 -497.314453125Q2657.12890625 -484.86328125 2680.322265625 -463.134765625Q2703.515625 -441.40625 2714.2578125 -412.353515625Q2725.0 -383.30078125 2725.0 -350.09765625V-190.91796875Q2725.0 -149.4140625 2726.220703125 -118.408203125Q2727.44140625 -87.40234375 2729.150390625 -64.94140625Q2730.859375 -42.48046875 2733.544921875 -27.34375Q2736.23046875 -12.20703125 2739.16015625 -1.953125V0.0H2631.25V-1.953125Q2633.69140625 -9.765625 2634.912109375 -19.53125Q2636.1328125 -29.296875 2637.109375 -42.96875Q2626.85546875 -34.1796875 2612.939453125 -24.90234375Q2599.0234375 -15.625 2581.201171875 -8.056640625Q2563.37890625 -0.48828125 2541.650390625 4.150390625Q2519.921875 8.7890625 2494.04296875 8.7890625Q2409.08203125 8.7890625 2362.6953125 -31.005859375Q2316.30859375 -70.80078125 2316.30859375 -144.04296875ZM2640.0390625 -286.1328125Q2595.60546875 -285.64453125 2554.58984375 -281.005859375Q2513.57421875 -276.3671875 2482.080078125 -261.71875Q2450.5859375 -247.0703125 2431.787109375 -219.970703125Q2412.98828125 -192.87109375 2412.98828125 -147.94921875Q2412.98828125 -90.33203125 2441.796875 -60.05859375Q2470.60546875 -29.78515625 2521.38671875 -29.78515625Q2544.82421875 -29.78515625 2564.111328125 -36.376953125Q2583.3984375 -42.96875 2598.291015625 -52.978515625Q2613.18359375 -62.98828125 2623.4375 -74.951171875Q2633.69140625 -86.9140625 2639.0625 -98.14453125Q2640.0390625 -116.69921875 2640.0390625 -139.404296875Q2640.0390625 -162.109375 2640.0390625 -190.91796875ZM3228.3984375 -329.1015625Q3228.3984375 -393.5546875 3202.51953125 -423.828125Q3176.640625 -454.1015625 3133.18359375 -454.1015625Q3117.55859375 -454.1015625 3098.02734375 -447.509765625Q3078.49609375 -440.91796875 3057.98828125 -429.931640625Q3037.48046875 -418.9453125 3016.97265625 -404.296875Q2996.46484375 -389.6484375 2978.3984375 -373.046875L2977.421875 -309.08203125V-190.91796875Q2977.421875 -149.4140625 2978.3984375 -118.408203125Q2979.375 -87.40234375 2981.328125 -64.94140625Q2983.28125 -42.48046875 2985.72265625 -27.34375Q2988.1640625 -12.20703125 2991.09375 -1.953125V0.0H2878.30078125V-1.953125Q2881.23046875 -12.20703125 2883.916015625 -27.34375Q2886.6015625 -42.48046875 2888.310546875 -64.94140625Q2890.01953125 -87.40234375 2891.240234375 -118.408203125Q2892.4609375 -149.4140625 2892.4609375 -190.91796875V-309.08203125Q2892.4609375 -350.5859375 2891.240234375 -381.591796875Q2890.01953125 -412.59765625 2888.310546875 -435.05859375Q2886.6015625 -457.51953125 2883.916015625 -472.65625Q2881.23046875 -487.79296875 2878.30078125 -498.046875V-500.0H2991.09375V-498.046875Q2987.1875 -485.83984375 2984.990234375 -467.041015625Q2982.79296875 -448.2421875 2980.3515625 -417.96875Q3000.37109375 -434.5703125 3023.564453125 -451.171875Q3046.7578125 -467.7734375 3071.66015625 -480.712890625Q3096.5625 -493.65234375 3122.44140625 -501.708984375Q3148.3203125 -509.765625 3173.22265625 -509.765625Q3211.30859375 -509.765625 3237.919921875 -496.58203125Q3264.53125 -483.3984375 3281.376953125 -461.9140625Q3298.22265625 -440.4296875 3305.791015625 -412.841796875Q3313.359375 -385.25390625 3313.359375 -356.93359375V-190.91796875Q3313.359375 -149.4140625 3314.3359375 -118.408203125Q3315.3125 -87.40234375 3317.265625 -64.94140625Q3319.21875 -42.48046875 3321.66015625 -27.34375Q3324.1015625 -12.20703125 3327.03125 -1.953125V0.0H3214.23828125V-1.953125Q3217.16796875 -12.20703125 3219.853515625 -27.34375Q3222.5390625 -42.48046875 3224.248046875 -64.94140625Q3225.95703125 -87.40234375 3227.177734375 -118.408203125Q3228.3984375 -149.4140625 3228.3984375 -190.91796875ZM3702.98828125 -508.7890625Q3723.0078125 -508.7890625 3743.02734375 -505.37109375Q3763.046875 -501.953125 3782.08984375 -495.60546875Q3801.1328125 -489.2578125 3818.22265625 -479.98046875Q3835.3125 -470.703125 3848.984375 -458.984375V-539.0625Q3848.984375 -580.56640625 3848.0078125 -611.572265625Q3847.03125 -642.578125 3845.078125 -665.0390625Q3843.125 -687.5 3840.68359375 -702.63671875Q3838.2421875 -717.7734375 3835.3125 -728.02734375V-729.98046875H3948.10546875V-728.02734375Q3945.17578125 -717.7734375 3942.490234375 -702.63671875Q3939.8046875 -687.5 3938.095703125 -665.0390625Q3936.38671875 -642.578125 3935.166015625 -611.572265625Q3933.9453125 -580.56640625 3933.9453125 -539.0625V-190.91796875Q3933.9453125 -149.4140625 3935.166015625 -118.408203125Q3936.38671875 -87.40234375 3938.095703125 -64.94140625Q3939.8046875 -42.48046875 3942.490234375 -27.34375Q3945.17578125 -12.20703125 3948.10546875 -1.953125V0.0H3840.1953125V-1.953125Q3841.66015625 -5.859375 3842.63671875 -13.427734375Q3843.61328125 -20.99609375 3845.078125 -32.2265625Q3820.17578125 -16.6015625 3782.578125 -3.90625Q3744.98046875 8.7890625 3695.17578125 8.7890625Q3637.0703125 8.7890625 3589.70703125 -9.27734375Q3542.34375 -27.34375 3508.896484375 -61.03515625Q3475.44921875 -94.7265625 3457.3828125 -142.822265625Q3439.31640625 -190.91796875 3439.31640625 -250.9765625Q3439.31640625 -306.15234375 3458.84765625 -353.271484375Q3478.37890625 -400.390625 3513.53515625 -435.05859375Q3548.69140625 -469.7265625 3597.03125 -489.2578125Q3645.37109375 -508.7890625 3702.98828125 -508.7890625ZM3848.984375 -373.046875Q3829.453125 -424.31640625 3793.076171875 -448.73046875Q3756.69921875 -473.14453125 3711.2890625 -473.14453125Q3673.203125 -473.14453125 3640.9765625 -459.716796875Q3608.75 -446.2890625 3585.80078125 -420.8984375Q3562.8515625 -395.5078125 3549.912109375 -358.642578125Q3536.97265625 -321.77734375 3536.97265625 -274.90234375Q3536.97265625 -222.16796875 3548.69140625 -176.7578125Q3560.41015625 -131.34765625 3583.115234375 -97.900390625Q3605.8203125 -64.453125 3639.51171875 -45.654296875Q3673.203125 -26.85546875 3717.1484375 -26.85546875Q3740.09765625 -26.85546875 3760.1171875 -32.2265625Q3780.13671875 -37.59765625 3796.73828125 -45.8984375Q3813.33984375 -54.19921875 3826.03515625 -64.208984375Q3838.73046875 -74.21875 3847.03125 -83.984375Q3848.0078125 -104.98046875 3848.49609375 -131.8359375Q3848.984375 -158.69140625 3848.984375 -190.91796875ZM4065.2734375 -144.04296875Q4065.2734375 -182.6171875 4081.142578125 -210.9375Q4097.01171875 -239.2578125 4123.37890625 -259.27734375Q4149.74609375 -279.296875 4183.4375 -291.748046875Q4217.12890625 -304.19921875 4253.26171875 -311.279296875Q4289.39453125 -318.359375 4324.55078125 -321.044921875Q4359.70703125 -323.73046875 4389.00390625 -324.21875V-349.12109375Q4389.00390625 -381.34765625 4380.703125 -404.78515625Q4372.40234375 -428.22265625 4357.265625 -443.603515625Q4342.12890625 -458.984375 4320.888671875 -466.552734375Q4299.6484375 -474.12109375 4274.2578125 -474.12109375Q4256.6796875 -474.12109375 4239.58984375 -471.19140625Q4222.5 -468.26171875 4204.189453125 -461.42578125Q4185.87890625 -454.58984375 4165.615234375 -442.87109375Q4145.3515625 -431.15234375 4121.9140625 -413.0859375L4117.03125 -416.015625L4150.234375 -484.86328125Q4166.34765625 -492.1875 4181.97265625 -496.826171875Q4197.59765625 -501.46484375 4213.7109375 -504.39453125Q4229.82421875 -507.32421875 4246.669921875 -508.544921875Q4263.515625 -509.765625 4282.0703125 -509.765625Q4333.33984375 -509.765625 4369.716796875 -497.314453125Q4406.09375 -484.86328125 4429.287109375 -463.134765625Q4452.48046875 -441.40625 4463.22265625 -412.353515625Q4473.96484375 -383.30078125 4473.96484375 -350.09765625V-190.91796875Q4473.96484375 -149.4140625 4475.185546875 -118.408203125Q4476.40625 -87.40234375 4478.115234375 -64.94140625Q4479.82421875 -42.48046875 4482.509765625 -27.34375Q4485.1953125 -12.20703125 4488.125 -1.953125V0.0H4380.21484375V-1.953125Q4382.65625 -9.765625 4383.876953125 -19.53125Q4385.09765625 -29.296875 4386.07421875 -42.96875Q4375.8203125 -34.1796875 4361.904296875 -24.90234375Q4347.98828125 -15.625 4330.166015625 -8.056640625Q4312.34375 -0.48828125 4290.615234375 4.150390625Q4268.88671875 8.7890625 4243.0078125 8.7890625Q4158.046875 8.7890625 4111.66015625 -31.005859375Q4065.2734375 -70.80078125 4065.2734375 -144.04296875ZM4389.00390625 -286.1328125Q4344.5703125 -285.64453125 4303.5546875 -281.005859375Q4262.5390625 -276.3671875 4231.044921875 -261.71875Q4199.55078125 -247.0703125 4180.751953125 -219.970703125Q4161.953125 -192.87109375 4161.953125 -147.94921875Q4161.953125 -90.33203125 4190.76171875 -60.05859375Q4219.5703125 -29.78515625 4270.3515625 -29.78515625Q4293.7890625 -29.78515625 4313.076171875 -36.376953125Q4332.36328125 -42.96875 4347.255859375 -52.978515625Q4362.1484375 -62.98828125 4372.40234375 -74.951171875Q4382.65625 -86.9140625 4388.02734375 -98.14453125Q4389.00390625 -116.69921875 4389.00390625 -139.404296875Q4389.00390625 -162.109375 4389.00390625 -190.91796875ZM4450.0390625 -645.01953125Q4413.90625 -632.8125 4376.796875 -619.140625Q4360.68359375 -613.28125 4343.10546875 -606.4453125Q4325.52734375 -599.609375 4307.4609375 -591.796875Q4289.39453125 -583.984375 4271.083984375 -575.927734375Q4252.7734375 -567.87109375 4236.171875 -559.08203125L4225.4296875 -577.1484375Q4257.16796875 -598.14453125 4288.662109375 -623.046875Q4320.15625 -647.94921875 4346.5234375 -669.921875Q4376.796875 -695.3125 4405.1171875 -721.19140625Z"/></g></g></svg></symbol>
+  </defs>
+</svg>
+
+<div class="sc-grain" aria-hidden="true"></div>
+
+<header class="bar">
+  <a class="bar__mark" href="#top" aria-label="Jacarandá Marrakech, retour en haut">
+    <svg viewBox="0 0 1830 760" aria-hidden="true"><use href="#jac-wm"/></svg>
+  </a>
+  <nav class="bar__links" aria-label="Principal">
+    <a class="btn btn--chip" href="#carte" data-carte>La carte</a>
+    <a class="btn btn--book" href="#reserver">Réserver</a>
+  </nav>
+</header>
+
+<!-- The clock. Scroll moves the hour; drag the ring to move the page. -->
+<nav class="clock" aria-label="Une journée chez Jacarandá" data-clock>
+  <div class="clock__dial" role="slider" tabindex="0" aria-label="Heure de la journée"
+       aria-valuemin="10" aria-valuemax="22" aria-valuenow="10" aria-valuetext="10:00, le jardin" data-dial>
+    <svg viewBox="461 301 1692 1692" aria-hidden="true">
+      <path class="clock__track" d="M699 714.8A746 746 0 0 1 1914.3 713.8M2004.4 1411.9A746 746 0 0 1 609.2 1410.7"/>
+      <circle class="clock__fill" cx="1307" cy="1147" r="746" pathLength="1" stroke-dasharray="0 1" transform="rotate(210 1307 1147)" data-fill/>
+      <path class="clock__arc" data-arc-top d=""/>
+      <path class="clock__arc" data-arc-bot d=""/>
+      <circle class="clock__sun" cx="661" cy="774" r="92" data-sun/>
+    </svg>
+    <span class="clock__time" data-time>10:00</span>
+  </div>
+  <span class="clock__label" data-label aria-hidden="true">Le jardin</span>
+  <ol class="clock__menu" data-menu>
+    <li><a href="#top" data-h="10"><span>10:00</span>Le jardin</a></li>
+    <li><a href="#brunch" data-h="10.75"><span>10:45</span>Brunch</a></li>
+    <li><a href="#dejeuner" data-h="13"><span>13:00</span>Déjeuner</a></li>
+    <li><a href="#coucher" data-h="18.5"><span>18:30</span>Coucher du soleil</a></li>
+    <li><a href="#lounge" data-h="21"><span>21:00</span>Le lounge</a></li>
+    <li><a href="#reserver" data-h="22"><span>22:00</span>Réserver</a></li>
+  </ol>
+</nav>
+
+<main id="top">
+
+  <!-- 10:00 · ARRIVAL. Layered garden: plate, wordmark, garden cutout, haze, leaves. -->
+  <section class="hero" id="jardin" data-sc-act="pin" data-sc-span="2" data-sc-drift="#E6DFD2" data-hour-start="10" data-hero>
+    <div data-sc-stage>
+      <picture>
+        <source media="(max-width: 860px)" srcset="media/hero-plate-m.webp">
+        <img class="hero__scene hero__plate" src="media/hero-plate.webp" width="2400" height="1357" alt="Le jardin de Jacarandá le matin : banquettes grises, olivier, bananiers et palmiers devant un mur ocre." fetchpriority="high">
+      </picture>
+      <div class="hero__wallscrim" aria-hidden="true"></div>
+      <h1 class="hero__type">
+        <svg viewBox="0 0 1830 760" role="img" aria-label="Jacarandá Marrakech"><use href="#jac-wm"/></svg>
+        <span class="hero__tag">Restaurant · Lounge · Jardin</span>
+      </h1>
+      <picture>
+        <source media="(max-width: 860px)" srcset="media/hero-front-m.webp">
+        <img class="hero__scene hero__front" src="media/hero-front.webp" width="2400" height="1357" alt="" aria-hidden="true">
+      </picture>
+      <div class="hero__haze" aria-hidden="true"></div>
+      <img class="hero__leaf hero__leaf--palm" src="media/leaves-palm.webp" width="1100" height="2065" alt="" aria-hidden="true">
+      <img class="hero__leaf hero__leaf--olive" src="media/leaves-olive.webp" width="1000" height="1339" alt="" aria-hidden="true">
+      <div class="sc-scrim sc-scrim--trail hero__band" aria-hidden="true"></div>
+      <div class="sc-copy sc-copy--trail hero__copy" data-sc-cue="0 0.6 0">
+        <p>À Gueliz, un jardin qui sert le brunch le matin et devient lounge le soir. Ouvert tous les jours dès 10h.</p>
+        <div class="actions">
+          <a class="btn btn--solid" href="#reserver">Réserver</a>
+          <a class="btn btn--line" href="#carte" data-carte>La carte</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10:45 to 12:00 · APPETITE. The five brunches, passed along the table. -->
+  <section class="brunch" id="brunch" data-sc-act="pan" data-sc-span="3" data-sc-drift="#E6DFD2">
+    <div data-sc-stage>
+      <div class="rail" data-sc-pan="0.04">
+        <div class="b-lead" style="--i:0">
+          <p class="stamp"><b>10:45</b> Tous les jours dès 10h</p>
+          <h2 class="sc-display">Le brunch, cinq façons.</h2>
+          <p class="sc-body">Du beldi marocain au foul égyptien. Chaque formule arrive avec une boisson chaude et un jus.</p>
+          <p class="price-line"><strong>180</strong> DH la formule</p>
+        </div>
+        <figure class="shot" style="--i:1">
+          <img src="media/brunch-beldi.webp" width="1100" height="1474" alt="Brunch beldi vu du dessus : msemen et miel, harcha aux olives, œufs au khlii, harira, thé à la menthe et jus d'orange." loading="lazy">
+        </figure>
+        <div class="dishes" style="--i:2">
+          <article class="dish">
+            <p class="dish__origin">Maroc</p>
+            <h3 class="dish__name">Beldi</h3>
+            <p class="dish__items">Harira, merguez de poulet, œuf au khlii, msemen au miel, harcha aux olives.</p>
+          </article>
+          <article class="dish">
+            <p class="dish__origin">Liban</p>
+            <h3 class="dish__name">Libanais</h3>
+            <p class="dish__items">Œuf à la viande hachée, man'ouché thym et fromage, labneh, feta, légumes crus.</p>
+          </article>
+        </div>
+        <figure class="shot" style="--i:3">
+          <img src="media/brunch-libanais.webp" width="1100" height="1474" alt="Brunch libanais : man'ouché au zaatar, labneh à l'huile d'olive, feta, légumes crus, pickles et thé." loading="lazy">
+        </figure>
+        <div class="dishes" style="--i:4">
+          <article class="dish">
+            <p class="dish__origin">Koweït</p>
+            <h3 class="dish__name">Koweïtien</h3>
+            <p class="dish__items">Chakchouka, chapati, cream cheese, qaimar, miel.</p>
+          </article>
+          <article class="dish">
+            <p class="dish__origin">Égypte</p>
+            <h3 class="dish__name">Égyptien</h3>
+            <p class="dish__items">Foul et taamia, légumes crus, cornichons, fromages variés.</p>
+          </article>
+          <article class="dish">
+            <p class="dish__origin">Jordanie</p>
+            <h3 class="dish__name">Jordanien</h3>
+            <p class="dish__items">Galaya tomate et viande, légumes crus, cornichons, fromages variés.</p>
+          </article>
+        </div>
+        <div class="b-end" style="--i:5">
+          <h3>Plutôt des œufs ?</h3>
+          <ul class="menu-lines">
+            <li><span class="n">Sunny side up</span><span class="p">30</span></li>
+            <li><span class="n">Omelette</span><span class="p">30</span></li>
+            <li><span class="n">Khlii</span><span class="p">40</span></li>
+            <li><span class="n">Chakchouka</span><span class="p">45</span></li>
+            <li><span class="n">Viande hachée et pignons</span><span class="p">55</span></li>
+          </ul>
+          <a class="btn btn--line" href="#carte" data-carte data-tab="brunch">La carte</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13:00 · ASSURANCE. A plate wiped into view, real dishes, real prices. -->
+  <section class="sc-section dej" id="dejeuner" data-sc-act="flow" data-sc-drift="#DED6C6">
+    <div class="sc-wrap dej__grid">
+      <div class="dej__text sc-stack" data-sc-in data-sc-stagger="60">
+        <p class="stamp"><b>13:00</b> Déjeuner au jardin</p>
+        <h2 class="sc-display">À l'ombre des palmiers.</h2>
+        <p class="sc-body">Des salades fraîches, des plats généreux et des tapas à partager, servis à table dans le jardin ou au salon.</p>
+        <ul class="menu-lines">
+          <li><span class="n">Filet de bœuf<small>Garniture au choix</small></span><span class="p">190</span></li>
+          <li><span class="n">Pavé de saumon<small>Légumes sautés ou riz basmati</small></span><span class="p">160</span></li>
+          <li><span class="n">Poulet cordon bleu<small>Pommes de terre maison ou frites</small></span><span class="p">130</span></li>
+          <li><span class="n">Wok de bœuf ou poulet</span><span class="p">110</span></li>
+          <li><span class="n">Salade burrata</span><span class="p">90</span></li>
+          <li><span class="n">Crevettes pil-pil</span><span class="p">75</span></li>
+        </ul>
+        <p class="dej__note">Prix en dirhams</p>
+        <div class="actions">
+          <a class="btn btn--solid" href="#carte" data-carte data-tab="cuisine">La carte</a>
+        </div>
+      </div>
+      <figure class="dej__fig" data-sc-reveal="up" data-sc-reveal-at="0.08 0.42">
+        <img src="media/dejeuner.webp" width="1300" height="1742" alt="Filet de bœuf tranché, gratin dauphinois et légumes verts sur une table en marbre, citronnade à la menthe, lumière tachetée des palmiers." loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- 18:30 · HUSH. Authored silence: the ground darkens, one line. -->
+  <section class="dusk night" id="coucher" data-sc-act="flow" data-sc-drift="#2C2820">
+    <div class="dusk__frame">
+      <picture>
+        <source media="(max-width: 860px)" srcset="media/coucher-m.webp">
+        <img class="dusk__img" src="media/coucher.webp" width="2400" height="1357" alt="Le même jardin au coucher du soleil : palmiers en silhouette sur un ciel abricot et violet, bougies allumées sur les tables." loading="lazy">
+      </picture>
+      <div class="dusk__scrim" aria-hidden="true"></div>
+      <div class="dusk__line">
+        <p class="stamp" data-sc-cue="0.3 0.86"><b>18:30</b></p>
+        <h2 class="sc-display" data-sc-cue="0.31 0.88" data-sc-kinetic="lines">Le soleil passe derrière les palmiers.</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- 21:00 · THRILL (peak). Lights on: the lounge opens from the lamp. -->
+  <section class="lounge night" id="lounge" data-sc-act="pin" data-sc-span="3.6" data-sc-drift="#12110D">
+    <div data-sc-stage>
+      <img class="lounge__img lounge__off" src="media/lounge-off.webp" width="2400" height="1357" alt="" aria-hidden="true">
+      <img class="lounge__img lounge__on" src="media/lounge-on.webp" width="2400" height="1357" alt="Le lounge le soir : niches en arc éclairées, banquettes en velours, tables en marbre, chicha et grande suspension en osier." loading="lazy">
+      <div class="lounge__scrim" aria-hidden="true"></div>
+      <div class="lounge__copy">
+        <p class="stamp"><b>21:00</b> Le lounge</p>
+        <div class="l-cue" data-sc-cue="0.1 0.37 0.2 0.18">
+          <h2 class="sc-display" data-sc-kinetic="lines">Et puis la lumière s'allume.</h2>
+        </div>
+        <div class="l-cue" data-sc-cue="0.36 0.58 0.18 0.18">
+          <h3>Chicha</h3>
+          <p>Fakher, Nakhla, Adalya et les mélanges Spéciale Jacarandá. En classique ou en Kaloud Brood, dès 100 DH.</p>
+        </div>
+        <div class="l-cue" data-sc-cue="0.57 0.79 0.18 0.18">
+          <h3>Jacarandá Sport</h3>
+          <p>Les grands matchs sur écran, la musique, l'ambiance. Venez à plusieurs.</p>
+        </div>
+        <div class="l-cue l-cue--drink" data-sc-cue="0.78 1 0.18 0.12">
+          <img src="media/nuit-cocktail.webp" width="900" height="1200" alt="Cocktail bleu à l'ananas et crevettes pil-pil sur une table en marbre, le soir." loading="lazy">
+          <div>
+            <h3>Cocktails maison</h3>
+            <p>Mojito, Green Goddess, Mango Magic, Passion Star, Signature Jacarandá. 55 DH.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 22:00 · BELONGING. The ring closes into the logo. -->
+  <section class="close taupe" id="reserver" data-sc-act="flow" data-sc-drift="#6B6250">
+    <div class="sc-wrap">
+      <div class="close__grid">
+        <figure class="lockup" data-lockup>
+          <svg viewBox="380 360 1854 1580" aria-hidden="true">
+            <g class="lockup__ring" data-lockup-ring>
+              <path d="M699 714.8A746 746 0 0 1 1914.3 713.8"/>
+              <path d="M2004.4 1411.9A746 746 0 0 1 609.2 1410.7"/>
+            </g>
+            <use href="#jac-wm" x="0" y="0" width="1830" height="760" transform="translate(380 820)"/>
+          </svg>
+          <figcaption class="lockup__tag">RESTAURANT &amp; LOUNGE</figcaption>
+        </figure>
+        <div class="close__text">
+          <p class="stamp"><b>22:00</b> Gueliz, Marrakech</p>
+          <h2 class="sc-display">Une table ce soir ?</h2>
+          <p class="sc-body">Écrivez-nous sur WhatsApp pour réserver, ou passez directement. Jacarandá est ouvert tous les jours dès 10h.</p>
+          <div class="actions">
+            <a class="btn btn--solid" href="https://wa.me/34647591229" target="_blank" rel="noopener">Réserver</a>
+            <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&query=Gueliz+Marrakech" target="_blank" rel="noopener">Itinéraire</a>
+          </div>
+          <dl class="facts">
+            <dt>Adresse</dt><dd>Rue Mohammed El Beqal, Gueliz, Marrakech 40000</dd>
+            <dt>Horaires</dt><dd>Tous les jours, dès 10h. Brunch dès 10h.</dd>
+            <dt>Instagram</dt><dd><a href="#" target="_blank" rel="noopener">@jacaranda.marrakech</a></dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="ig">
+        <div class="ig__head">
+          <span>La vie chez Jacarandá</span>
+          <a href="#" target="_blank" rel="noopener">Voir sur Instagram</a>
+        </div>
+        <div class="ig__grid">
+          <a href="#" target="_blank" rel="noopener"><img src="media/ig-d.webp" width="360" height="481" alt="Un cocktail bleu à la bougie." loading="lazy"></a>
+          <a href="#" target="_blank" rel="noopener"><img src="media/ig-b.webp" width="360" height="481" alt="Le jardin en journée." loading="lazy"></a>
+          <a href="#" target="_blank" rel="noopener"><img src="media/ig-c.webp" width="360" height="481" alt="Fondant au chocolat, glace et fruits rouges." loading="lazy"></a>
+          <a href="#" target="_blank" rel="noopener"><img src="media/ig-e.webp" width="360" height="423" alt="Le brunch libanais." loading="lazy"></a>
+          <a href="#" target="_blank" rel="noopener"><img src="media/ig-a.webp" width="360" height="481" alt="Le lounge le soir." loading="lazy"></a>
+          <a href="#" target="_blank" rel="noopener"><img src="media/ig-f.webp" width="360" height="481" alt="Le jardin au coucher du soleil." loading="lazy"></a>
+        </div>
+      </div>
+
+      <footer class="foot">
+        <span>Jacarandá Marrakech · Restaurant, lounge et jardin · Gueliz</span>
+        
+      </footer>
+    </div>
+  </section>
+
+</main>
+
+<!-- La carte, transcribed from the printed menu. -->
+<dialog class="carte" id="carte" aria-labelledby="carte-title">
+  <div class="carte__head">
+    <h2 class="sc-display" id="carte-title">La carte</h2>
+    <button class="carte__x" type="button" data-close aria-label="Fermer la carte">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 3l12 12M15 3L3 15" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+    </button>
+  </div>
+  <div class="tabs" role="tablist" aria-label="Rubriques de la carte">
+    <button role="tab" id="t-brunch" aria-controls="p-brunch" aria-selected="true" data-tab="brunch">Brunch</button>
+    <button role="tab" id="t-cuisine" aria-controls="p-cuisine" aria-selected="false" tabindex="-1" data-tab="cuisine">Cuisine</button>
+    <button role="tab" id="t-desserts" aria-controls="p-desserts" aria-selected="false" tabindex="-1" data-tab="desserts">Desserts</button>
+    <button role="tab" id="t-boissons" aria-controls="p-boissons" aria-selected="false" tabindex="-1" data-tab="boissons">Boissons</button>
+    <button role="tab" id="t-chicha" aria-controls="p-chicha" aria-selected="false" tabindex="-1" data-tab="chicha">Chicha</button>
+  </div>
+  <div class="carte__body">
+    <div role="tabpanel" id="p-brunch" aria-labelledby="t-brunch" tabindex="0">
+      <section class="wide">
+        <h3>Brunch, tous les jours dès 10h <span>180</span></h3>
+        <ul class="menu-lines">
+          <li><span class="n">Beldi<small>Harira, merguez de poulet, œuf au khlii, msemen au miel, harcha olive, boisson chaude et jus</small></span></li>
+          <li><span class="n">Libanais<small>Œuf avec viande hachée, mankoushe thym fromage, labneh, feta, légumes crus, boisson chaude et jus</small></span></li>
+          <li><span class="n">Koweïtien<small>Chakchouka, chapati, cream cheese, qaimar, miel, boisson chaude et jus</small></span></li>
+          <li><span class="n">Égyptien<small>Foul et taamia, légumes crus, cornichons, variété de fromages, boisson chaude et jus</small></span></li>
+          <li><span class="n">Jordanien<small>Galaya tomate et viande, légumes crus, cornichons, variété de fromages, boisson chaude et jus</small></span></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Menu œufs</h3>
+        <ul class="menu-lines">
+          <li><span class="n">Sunny side up</span><span class="p">30</span></li>
+          <li><span class="n">Omelette</span><span class="p">30</span></li>
+          <li><span class="n">Chakchouka</span><span class="p">45</span></li>
+          <li><span class="n">Khlii</span><span class="p">40</span></li>
+          <li><span class="n">Viande hachée et pignons</span><span class="p">55</span></li>
+          <li><span class="n">Aux patates</span><span class="p">55</span></li>
+        </ul>
+      </section>
+    </div>
+    <div role="tabpanel" id="p-cuisine" aria-labelledby="t-cuisine" tabindex="0" hidden>
+      <section>
+        <h3>Entrées</h3>
+        <ul class="menu-lines">
+          <li><span class="n">Salade César</span><span class="p">85</span></li>
+          <li><span class="n">Salade grecque</span><span class="p">70</span></li>
+          <li><span class="n">Salade fruits de mer</span><span class="p">95</span></li>
+          <li><span class="n">Salade burrata</span><span class="p">90</span></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Tapas</h3>
+        <ul class="menu-lines">
+          <li><span class="n">Crevettes tempura</span><span class="p">75</span></li>
+          <li><span class="n">Crevettes pil-pil</span><span class="p">75</span></li>
+          <li><span class="n">Mini burgers</span><span class="p">75</span></li>
+          <li><span class="n">Samboussa</span><span class="p">50</span></li>
+          <li><span class="n">Poulet crispy strips</span><span class="p">75</span></li>
+          <li><span class="n">Trio tacos mexicains</span><span class="p">70</span></li>
+          <li><span class="n">Hummus</span><span class="p">35</span></li>
+          <li><span class="n">Maïs grillé</span><span class="p">35</span></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Plats</h3>
+        <ul class="menu-lines">
+          <li><span class="n">Filet de bœuf<small>Garniture au choix</small></span><span class="p">190</span></li>
+          <li><span class="n">Poulet cordon bleu<small>Pommes de terre maison ou frites</small></span><span class="p">130</span></li>
+          <li><span class="n">Pavé de saumon<small>Légumes sautés ou riz basmati</small></span><span class="p">160</span></li>
+          <li><span class="n">Wok de bœuf ou poulet</span><span class="p">110</span></li>
+          <li><span class="n">Penne arrabbiata</span><span class="p">85</span></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Sandwichs</h3>
+        <ul class="menu-lines">
+          <li><span class="n">Sujuk<small>Accompagné de frites</small></span><span class="p">75</span></li>
+          <li><span class="n">Poulet César<small>Accompagné de frites</small></span><span class="p">75</span></li>
+          <li><span class="n">Jacarandá kefta<small>Accompagné de frites</small></span><span class="p">75</span></li>
+        </ul>
+        <h3 style="margin-top:2rem">Garnitures</h3>
+        <ul class="menu-lines">
+          <li><span class="n">Légumes sautés</span><span class="p">30</span></li>
+          <li><span class="n">Frites</span><span class="p">30</span></li>
+          <li><span class="n">Gratin dauphinois</span><span class="p">40</span></li>
+        </ul>
+      </section>
+    </div>
+    <div role="tabpanel" id="p-desserts" aria-labelledby="t-desserts" tabindex="0" hidden>
+      <section class="wide">
+        <h3>Desserts</h3>
+        <ul class="menu-lines">
+          <li><span class="n">Fondant au chocolat</span><span class="p">60</span></li>
+          <li><span class="n">Tiramisu</span><span class="p">55</span></li>
+          <li><span class="n">Cheesecake</span><span class="p">60</span></li>
+          <li><span class="n">Crêpes<small>Nutella, caramel ou sucrée</small></span><span class="p">55</span></li>
+          <li><span class="n">Gaufres<small>Fruits rouges ou chocolat</small></span><span class="p">55</span></li>
+          <li><span class="n">Assiette de fruits</span><span class="p">50</span></li>
+          <li><span class="n">Glace, 3 boules<small>Fraise, vanille, chocolat</small></span><span class="p">55</span></li>
+        </ul>
+      </section>
+    </div>
+    <div role="tabpanel" id="p-boissons" aria-labelledby="t-boissons" tabindex="0" hidden>
+      <section>
+        <h3>Cocktails <span>55</span></h3>
+        <ul class="menu-lines">
+          <li><span class="n">Mojito<small>Simple, ananas, fraise ou tropical</small></span></li>
+          <li><span class="n">Green Goddess<small>Jus d'ananas, mangue, concombre, céleri, miel, épinard</small></span></li>
+          <li><span class="n">Mango Magic<small>Mangue, fraise, ananas, orange, yaourt</small></span></li>
+          <li><span class="n">Passion Star<small>Ananas, orange, purée de fruit de la passion</small></span></li>
+          <li><span class="n">Caribbean Ferry<small>Banane, mangue, fraise, framboise, crème coco</small></span></li>
+          <li><span class="n">Signature Jacarandá</span></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Detox <span>50</span></h3>
+        <ul class="menu-lines">
+          <li><span class="n">Exotique<small>Carotte, citron, gingembre, jus de pamplemousse</small></span></li>
+          <li><span class="n">Youmi<small>Concombre, pomme, persil, miel</small></span></li>
+          <li><span class="n">Zinger<small>Orange, carotte, céleri, pomme, gingembre</small></span></li>
+          <li><span class="n">Heroes Garden<small>Concombre, citron, menthe, pomme, ananas, gingembre</small></span></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Frappuccino <span>50</span></h3>
+        <ul class="menu-lines"><li><span class="n">Caramel, chocolat, noisette, vanille</span></li></ul>
+        <h3 style="margin-top:2rem">Milkshakes <span>50</span></h3>
+        <ul class="menu-lines"><li><span class="n">Vanille, fraise, Nutella, chocolat, Oreo, Kinder Bueno</span></li></ul>
+      </section>
+      <section>
+        <h3>Nos jus</h3>
+        <ul class="menu-lines">
+          <li><span class="n">Orange, citron, banane, fraise</span><span class="p">35</span></li>
+          <li><span class="n">Ananas, mangue, pêche</span><span class="p">35</span></li>
+          <li><span class="n">Avocat</span><span class="p">40</span></li>
+          <li><span class="n">Jus Jacarandá</span><span class="p">50</span></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Boissons chaudes</h3>
+        <ul class="menu-lines">
+          <li><span class="n">Espresso</span><span class="p">25</span></li>
+          <li><span class="n">Espresso macchiato</span><span class="p">30</span></li>
+          <li><span class="n">Café allongé</span><span class="p">25</span></li>
+          <li><span class="n">Café crème</span><span class="p">30</span></li>
+          <li><span class="n">Cappuccino</span><span class="p">40</span></li>
+          <li><span class="n">Caramel macchiato</span><span class="p">40</span></li>
+          <li><span class="n">Chocolat chaud</span><span class="p">30</span></li>
+          <li><span class="n">Thé à la menthe</span><span class="p">25</span></li>
+          <li><span class="n">Verveine</span><span class="p">30</span></li>
+          <li><span class="n">Chai</span><span class="p">25</span></li>
+          <li><span class="n">Café arabe</span><span class="p">50</span></li>
+          <li><span class="n">Chai karak</span><span class="p">30</span></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Sodas et eaux</h3>
+        <ul class="menu-lines">
+          <li><span class="n">Coca-Cola, Zero</span><span class="p">30</span></li>
+          <li><span class="n">Sprite</span><span class="p">30</span></li>
+          <li><span class="n">Schweppes tonic, citron</span><span class="p">30</span></li>
+          <li><span class="n">Red Bull</span><span class="p">45</span></li>
+          <li><span class="n">Oasis</span><span class="p">50</span></li>
+          <li><span class="n">Hawaï</span><span class="p">30</span></li>
+          <li><span class="n">Eau plate 50 cl</span><span class="p">20</span></li>
+          <li><span class="n">Eau plate 75 cl</span><span class="p">30</span></li>
+          <li><span class="n">Eau pétillante 75 cl</span><span class="p">30</span></li>
+        </ul>
+      </section>
+    </div>
+    <div role="tabpanel" id="p-chicha" aria-labelledby="t-chicha" tabindex="0" hidden>
+      <section class="wide">
+        <table>
+          <thead><tr><th scope="col">Fakher</th><th scope="col">Classique</th><th scope="col">Kaloud Brood</th></tr></thead>
+          <tbody>
+            <tr><td>Pomme</td><td>100</td><td>150</td></tr>
+            <tr><td>Pomme menthe</td><td>100</td><td>150</td></tr>
+            <tr><td>Menthe</td><td>100</td><td>150</td></tr>
+            <tr><td>Raisin</td><td>100</td><td>150</td></tr>
+          </tbody>
+          <thead><tr><th scope="col">Nakhla</th><th></th><th></th></tr></thead>
+          <tbody>
+            <tr><td>Double pomme</td><td>100</td><td>150</td></tr>
+            <tr><td>Réglisse</td><td>100</td><td>150</td></tr>
+          </tbody>
+          <thead><tr><th scope="col">Adalya</th><th></th><th></th></tr></thead>
+          <tbody>
+            <tr><td>Love 66</td><td>150</td><td>200</td></tr>
+            <tr><td>Mi Amor</td><td>150</td><td>200</td></tr>
+            <tr><td>Hawaii</td><td>150</td><td>200</td></tr>
+          </tbody>
+          <thead><tr><th scope="col">Spéciale Jacarandá</th><th></th><th></th></tr></thead>
+          <tbody>
+            <tr><td>Menthe sucrée</td><td>200</td><td>250</td></tr>
+            <tr><td>Jacarandá sucrée</td><td>200</td><td>250</td></tr>
+            <tr><td>Salloum</td><td>300</td><td></td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+  <div class="carte__foot">
+    <span>Prix en dirhams</span>
+    
+  </div>
+</dialog>
+
+<script src="scrollcraft.js"></script>
+<script>ScrollCraft.mount(document.body);</script>
+<script>
+(function () {
+  'use strict';
+  var root = document.documentElement;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
+
+  /* ---------------------------------------------------------- the clock --
+     One day, 10:00 to 22:00, mapped onto the logo's ring as a 12-hour face.
+     Scroll sets the hour; dragging the ring sets the scroll. */
+  var CX = 1307, CY = 1147, R = 746;
+  var H0 = 10, H1 = 22;
+  var clock = $('[data-clock]'), dial = $('[data-dial]'), fill = $('[data-fill]'), sun = $('[data-sun]');
+  var timeEl = $('[data-time]'), labelEl = $('[data-label]'), menu = $('[data-menu]');
+  var links = Array.prototype.slice.call(menu.querySelectorAll('a'));
+  var S = {
+    hero: $('#jardin'), brunch: $('#brunch'), dej: $('#dejeuner'),
+    dusk: $('#coucher'), lounge: $('#lounge'), close: $('#reserver')
+  };
+  var lockup = $('[data-lockup]'), lockRing = $('[data-lockup-ring]');
+  var anchors = [];
+  var vh = innerHeight;
+
+  function top(el) { var t = 0; while (el) { t += el.offsetTop; el = el.offsetParent; } return t; }
+  function measure() {
+    vh = innerHeight;
+    var maxY = Math.max(document.documentElement.scrollHeight - vh, 1);
+    var b = top(S.brunch), d = top(S.dej), u = top(S.dusk), l = top(S.lounge), c = top(S.close);
+    anchors = [
+      [10, 0],
+      [10.75, b],
+      [12, b + S.brunch.offsetHeight - vh],
+      [13, d + vh * 0.15],
+      [18.5, u + S.dusk.offsetHeight / 2 - vh / 2],
+      [21, l],
+      [21.75, l + S.lounge.offsetHeight - vh],
+      [22, Math.min(c, maxY)]
+    ];
+    for (var i = 1; i < anchors.length; i++) anchors[i][1] = Math.max(anchors[i][1], anchors[i - 1][1] + 1);
+  }
+  function hourAt(y) {
+    if (y <= anchors[0][1]) return H0;
+    for (var i = 1; i < anchors.length; i++) {
+      var a = anchors[i - 1], b = anchors[i];
+      if (y <= b[1]) return a[0] + (b[0] - a[0]) * (y - a[1]) / (b[1] - a[1]);
+    }
+    return H1;
+  }
+  function yAt(h) {
+    if (h <= H0) return 0;
+    for (var i = 1; i < anchors.length; i++) {
+      var a = anchors[i - 1], b = anchors[i];
+      if (h <= b[0]) return a[1] + (b[1] - a[1]) * (h - a[0]) / (b[0] - a[0]);
+    }
+    return anchors[anchors.length - 1][1];
+  }
+  function fmt(h) {
+    var m = Math.round(h * 12) * 5; var hh = Math.floor(m / 60), mm = m % 60;
+    return (hh < 10 ? '0' : '') + hh + ':' + (mm < 10 ? '0' : '') + mm;
+  }
+  function label(h) {
+    return h < 10.5 ? 'Le jardin' : h < 12.4 ? 'Brunch' : h < 15 ? 'Déjeuner'
+         : h < 20.2 ? 'Coucher du soleil' : h < 21.9 ? 'Le lounge' : 'Réserver';
+  }
+
+  var lastText = '', lastIdx = -1;
+  function drawClock(h) {
+    var f = (h - H0) / (H1 - H0);
+    fill.setAttribute('stroke-dasharray', f.toFixed(4) + ' 1');
+    var ang = (210 + f * 360) * Math.PI / 180;
+    sun.setAttribute('cx', (CX + R * Math.cos(ang)).toFixed(1));
+    sun.setAttribute('cy', (CY + R * Math.sin(ang)).toFixed(1));
+    var t = fmt(h), lb = label(h);
+    if (t !== lastText) {
+      timeEl.textContent = t; lastText = t;
+      dial.setAttribute('aria-valuenow', h.toFixed(2));
+      dial.setAttribute('aria-valuetext', t + ', ' + lb.toLowerCase());
+      labelEl.textContent = lb;
+    }
+    var idx = 0;
+    for (var i = 0; i < links.length; i++) if (h >= parseFloat(links[i].getAttribute('data-h')) - 0.01) idx = i;
+    if (idx !== lastIdx) {
+      links.forEach(function (a, k) { if (k === idx) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+      lastIdx = idx;
+    }
+  }
+
+  /* Tone: read the drifting ground and flip the chrome when it goes dark. */
+  function lum(hex) {
+    var m = /rgb\((\d+),\s*(\d+),\s*(\d+)/.exec(hex);
+    var r, g, b;
+    if (m) { r = +m[1]; g = +m[2]; b = +m[3]; }
+    else { hex = hex.replace('#', ''); r = parseInt(hex.substr(0, 2), 16); g = parseInt(hex.substr(2, 2), 16); b = parseInt(hex.substr(4, 2), 16); }
+    return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+  }
+
+  /* The landing: in the last screen the clock flies into the logo and the
+     day's full circle becomes the two arcs of the mark. */
+  var land = 0;
+  var track = $('.clock__track'), arcTop = $('[data-arc-top]'), arcBot = $('[data-arc-bot]');
+  var smooth = function (x) { x = clamp(x, 0, 1); return x * x * (3 - 2 * x); };
+  var mix = function (a, b, k) { return a + (b - a) * k; };
+  function arcD(a0, a1) {
+    var r0 = a0 * Math.PI / 180, r1 = a1 * Math.PI / 180;
+    return 'M' + (CX + R * Math.cos(r0)).toFixed(1) + ' ' + (CY + R * Math.sin(r0)).toFixed(1) +
+           'A' + R + ' ' + R + ' 0 ' + (a1 - a0 > 180 ? 1 : 0) + ' 1 ' +
+           (CX + R * Math.cos(r1)).toFixed(1) + ' ' + (CY + R * Math.sin(r1)).toFixed(1);
+  }
+  // From the day's full circle (two halves) to the logo's two arcs, in
+  // screen degrees clockwise from three o'clock.
+  var TOP = [180, 360, 215.4, 324.5], BOT = [0, 180, 20.8, 159.3];
+  function inkOf(el) { var m = /(\d+),\s*(\d+),\s*(\d+)/.exec(getComputedStyle(el).color); return m ? [+m[1], +m[2], +m[3]] : [33, 31, 24]; }
+  function drawLanding() {
+    var r = lockup.getBoundingClientRect();
+    var t = clamp((vh * 0.92 - r.top) / (vh * 0.5), 0, 1);
+    // Flight lands at t 0.58; the halves close into the arcs from 0.42 to 0.84;
+    // the handoff to the static logo happens only once both are exact.
+    var tt = smooth(t / 0.58), split = smooth((t - 0.42) / 0.42);
+    var landing = tt > 0 && !reduce;
+    if (landing) {
+      arcTop.setAttribute('d', arcD(mix(TOP[0], TOP[2], split), mix(TOP[1], TOP[3], split)));
+      arcBot.setAttribute('d', arcD(mix(BOT[0], BOT[2], split), mix(BOT[1], BOT[3], split)));
+      clock.style.color = '';
+      var from = inkOf(clock), w = smooth(tt / 0.6);
+      clock.style.color = 'rgb(' + [0, 1, 2].map(function (i) { return Math.round(mix(from[i], [255, 252, 246][i], w)); }).join(',') + ')';
+    } else {
+      clock.style.color = '';
+    }
+    arcTop.style.opacity = arcBot.style.opacity = landing ? '1' : '0';
+    fill.style.opacity = track.style.opacity = landing ? '0' : '';
+    sun.style.opacity = landing ? (1 - smooth(tt / 0.25)).toFixed(3) : '';
+    var svg = lockup.querySelector('svg').getBoundingClientRect();
+    // ring centre and diameter inside the lockup's viewBox (380 360 1854 1580)
+    var k = svg.width / 1854;
+    var tx = svg.left + (CX - 380) * k, ty = svg.top + (CY - 360) * k;
+    var tD = 2 * R * k;
+    if (tt > 0 && !reduce) {
+      // Measure the untransformed dial, scale about the ring centre, then
+      // carry that centre onto the logo's ring centre.
+      clock.style.transform = 'none';
+      var c = clock.getBoundingClientRect(), d = dial.getBoundingClientRect(), dk = d.width / 1692;
+      var sx = d.left + (CX - 461) * dk, sy = d.top + (CY - 301) * dk, sD = 2 * R * dk;
+      var s = 1 + (tD / sD - 1) * tt;
+      clock.style.transformOrigin = (sx - c.left).toFixed(1) + 'px ' + (sy - c.top).toFixed(1) + 'px';
+      clock.style.transform = 'translate3d(' + ((tx - sx) * tt).toFixed(1) + 'px,' + ((ty - sy) * tt).toFixed(1) + 'px,0) scale(' + s.toFixed(4) + ')';
+    } else {
+      clock.style.transform = '';
+    }
+    // Geometry, scale and colour are identical at this point, so the swap is invisible.
+    var done = reduce ? t > 0.6 : t >= 0.9;
+    var fade = reduce ? clamp((t - 0.4) / 0.3, 0, 1) : (done ? 1 : 0);
+    clock.style.opacity = reduce ? (1 - fade).toFixed(3) : (done ? '0' : '1');
+    clock.style.visibility = fade >= 1 ? 'hidden' : '';
+    dial.style.background = tt > 0.05 ? 'transparent' : '';
+    dial.style.boxShadow = tt > 0.05 ? 'none' : '';
+    timeEl.style.opacity = (1 - clamp(tt * 3, 0, 1)).toFixed(3);
+    labelEl.style.opacity = tt > 0.02 ? '0' : '';
+    lockRing.style.opacity = reduce ? '1' : fade.toFixed(3);
+    land = t;
+  }
+
+  var dragging = false;
+  function frame() {
+    var y = scrollY;
+    var h = dragging ? dragH : hourAt(y);
+    drawClock(h);
+    var bg = getComputedStyle(root).getPropertyValue('--sc-canvas').trim();
+    var dark = bg && lum(bg) < 0.36;
+    var tone = dark ? 'dark' : 'light';
+    if (root.getAttribute('data-tone') !== tone) root.setAttribute('data-tone', tone);
+    var heroOn = y < vh * 0.9 ? '1' : '0';
+    if (root.getAttribute('data-hero') !== heroOn) root.setAttribute('data-hero', heroOn);
+    drawLanding();
+  }
+  var queued = false;
+  function tick() { queued = false; frame(); }
+  function ask() { if (!queued) { queued = true; requestAnimationFrame(tick); } }
+  addEventListener('scroll', ask, { passive: true });
+  addEventListener('resize', function () { measure(); ask(); });
+  addEventListener('load', function () { measure(); ask(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { measure(); ask(); });
+  measure(); frame();
+
+  // Drag the ring: the angle is the hour, the hour is a scroll position.
+  var dragH = H0, downX = 0, downY = 0, moved = false, pid = null;
+  function hourFromPoint(x, y) {
+    var r = dial.getBoundingClientRect();
+    var a = Math.atan2(y - (r.top + r.height / 2), x - (r.left + r.width / 2)) * 180 / Math.PI;
+    var clockDeg = (a + 90 + 360) % 360;           // 0 at twelve o'clock, clockwise
+    var rel = (clockDeg - 300 + 360) % 360;         // 0 at ten o'clock
+    var h = H0 + rel / 30;
+    if (Math.abs(h - dragH) > 6) h = dragH > 16 ? H1 : H0; // no wrapping past the ends of the day
+    return clamp(h, H0, H1);
+  }
+  dial.addEventListener('pointerdown', function (e) {
+    if (e.button !== 0) return;
+    pid = e.pointerId; downX = e.clientX; downY = e.clientY; moved = false;
+    dragH = hourAt(scrollY);
+    e.preventDefault();
+  });
+  addEventListener('pointermove', function (e) {
+    if (pid === null || e.pointerId !== pid) return;
+    if (!moved && Math.hypot(e.clientX - downX, e.clientY - downY) < 5) return;
+    moved = true; dragging = true; dial.classList.add('is-drag');
+    dragH = hourFromPoint(e.clientX, e.clientY);
+    window.scrollTo({ top: yAt(dragH), behavior: 'instant' });
+    ask();
+  });
+  function endDrag(e) {
+    if (pid === null || (e && e.pointerId !== pid)) return;
+    pid = null;
+    if (!moved) clock.classList.toggle('is-open');
+    dragging = false; dial.classList.remove('is-drag'); ask();
+  }
+  addEventListener('pointerup', endDrag);
+  addEventListener('pointercancel', endDrag);
+  document.addEventListener('pointerdown', function (e) { if (!clock.contains(e.target)) clock.classList.remove('is-open'); });
+
+  var stops = links.map(function (a) { return parseFloat(a.getAttribute('data-h')); });
+  function goHour(h, smooth) { window.scrollTo({ top: yAt(h), behavior: smooth && !reduce ? 'smooth' : 'instant' }); }
+  dial.addEventListener('keydown', function (e) {
+    var h = hourAt(scrollY), next = null;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowUp') next = stops.filter(function (s) { return s > h + 0.02; })[0];
+    else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') next = stops.filter(function (s) { return s < h - 0.02; }).pop();
+    else if (e.key === 'Home') next = H0;
+    else if (e.key === 'End') next = H1;
+    else if (e.key === 'Enter' || e.key === ' ') { clock.classList.toggle('is-open'); e.preventDefault(); return; }
+    else if (e.key === 'Escape') { clock.classList.remove('is-open'); return; }
+    if (next !== null && next !== undefined) { e.preventDefault(); goHour(next, true); }
+  });
+  links.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault(); clock.classList.remove('is-open');
+      goHour(parseFloat(a.getAttribute('data-h')), true);
+    });
+  });
+
+  /* ---------------------------------------------------- hero pointer depth --
+     Fine pointers only. Each plane reads --mx/--my at its own rate. */
+  if (fine && !reduce) {
+    var hero = S.hero, tx0 = 0, ty0 = 0, cx0 = 0, cy0 = 0, raf = 0;
+    hero.addEventListener('pointermove', function (e) {
+      tx0 = (e.clientX / innerWidth) * 2 - 1; ty0 = (e.clientY / innerHeight) * 2 - 1;
+      if (!raf) raf = requestAnimationFrame(step);
+    });
+    hero.addEventListener('pointerleave', function () { tx0 = 0; ty0 = 0; if (!raf) raf = requestAnimationFrame(step); });
+    function step() {
+      cx0 += (tx0 - cx0) * 0.08; cy0 += (ty0 - cy0) * 0.08;
+      hero.style.setProperty('--mx', cx0.toFixed(3)); hero.style.setProperty('--my', cy0.toFixed(3));
+      raf = (Math.abs(tx0 - cx0) + Math.abs(ty0 - cy0) > 0.002) ? requestAnimationFrame(step) : 0;
+    }
+  }
+
+  /* ----------------------------------------------------------- la carte -- */
+  var dlg = $('#carte');
+  var tabs = Array.prototype.slice.call(dlg.querySelectorAll('[role="tab"]'));
+  function select(name, focus) {
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-tab') === name;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      $('#' + t.getAttribute('aria-controls')).hidden = !on;
+      if (on && focus) t.focus();
+    });
+    dlg.querySelector('.carte__body').scrollTop = 0;
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(t.getAttribute('data-tab')); });
+    t.addEventListener('keydown', function (e) {
+      var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (e.key === 'Home') { e.preventDefault(); select(tabs[0].getAttribute('data-tab'), true); }
+      if (e.key === 'End') { e.preventDefault(); select(tabs[tabs.length - 1].getAttribute('data-tab'), true); }
+      if (k) { e.preventDefault(); select(tabs[(i + k + tabs.length) % tabs.length].getAttribute('data-tab'), true); }
+    });
+  });
+  if (typeof dlg.showModal === 'function') {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-carte]'), function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        select(a.getAttribute('data-tab') || 'brunch');
+        dlg.showModal();
+      });
+    });
+    dlg.querySelector('[data-close]').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  }
+})();
+</script>
+</body>
+</html>
